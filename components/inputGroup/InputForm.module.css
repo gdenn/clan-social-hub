@@ -1,0 +1,11 @@
+.inputGroup > * {
+    margin: 5px 0 5px 0;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: green;
+}
