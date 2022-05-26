@@ -14,11 +14,11 @@ const Header = () => (
 )
 
 const Nav = () => (
-    <div></div>
+    <div className={styles.nav}></div>
 )
 
 const Footer = () => (
-    <footer></footer>
+    <footer className={styles.footer}></footer>
 )
 
 const Layout  = ({ children }: LayoutProps) => {
@@ -31,7 +31,7 @@ const Layout  = ({ children }: LayoutProps) => {
         </Head>
         <Header />
 
-        <main>
+        <main className={styles.main}>
           <Nav></Nav>
           <div>{children}</div>
         </main>
