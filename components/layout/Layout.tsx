@@ -33,7 +33,7 @@ const Layout  = ({ children }: LayoutProps) => {
 
         <main className={styles.main}>
           <Nav></Nav>
-          <div>{children}</div>
+          <div className={styles.contentContainer}>{children}</div>
         </main>
         <Footer />
       </div>

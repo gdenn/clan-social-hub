@@ -1,4 +1,38 @@
-.dummy {
-    height: 2000px;
-    background-color: blue;
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background: gray;
+}
+
+.inputGroup {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 25px auto 25px auto;
+}
+
+.inputGroup > * {
+    margin: 5px 0 5px 0;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: green;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.button {
+    padding: 5px 20px 5px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
