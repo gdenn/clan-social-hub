@@ -11,7 +11,7 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
         <InputGroup label="New Event">
           <InputForm>Title</InputForm>
           <InputForm>Description</InputForm>
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
             <Button>Create</Button>
           </ButtonGroup>
         </InputGroup>
-      </div>
+      </div> */}
     </Layout>
   );
 }
