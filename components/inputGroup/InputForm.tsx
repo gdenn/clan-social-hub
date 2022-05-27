@@ -1,13 +1,14 @@
 import React, { ReactNode } from 'react'
-import styles from './InputForm.module.css'
+import styles from "./InputForm.module.scss"
 
 interface InputFormProps {
-  children: ReactNode;
+  children: ReactNode
+  large?: boolean
 }
 
-export const InputForm = ({ children }: InputFormProps) => (
-  <div className={styles.inputForm}>
+export const InputForm = ({ children, large }: InputFormProps) => (
+  <div className={`${large ? styles.inputFormLarge : styles.InputForm}`}>
     <label>{children}</label>
-    <input />
+    <input/>
   </div>
 );

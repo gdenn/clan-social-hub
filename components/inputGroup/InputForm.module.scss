@@ -1,0 +1,31 @@
+.inputGroup > * {
+    margin: 5px 0 5px 0;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.inputFormLarge {
+    @extend .inputForm;
+    height: 300px;
+}
+
+.inputForm > * {
+    margin: 5px 0 5px 0;
+}
+
+.inputForm label {
+    width: 120px;
+}
+
+.inputForm input {
+    height: 30px;
+    flex-grow: 1;
+    border: solid .3px gray;
+    border-radius: 5px
+}
