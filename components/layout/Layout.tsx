@@ -6,7 +6,6 @@ import Link from 'next/link'
 
 interface LayoutProps {
   children: ReactNode
-  menuItems: MenuItems
 }
 
 interface MenuItem {

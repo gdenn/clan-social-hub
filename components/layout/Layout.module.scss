@@ -25,6 +25,10 @@
     background-color: $gray-bg;
 }
 
+.left, .right, .main {
+    @extend .margin-top;
+}
+
 .left, .right {
     width: 250px;
 }
@@ -45,7 +49,8 @@
 
     height: 50px;
     width: 100vw;
-    background-color: $white-bg;
+    background-color: green;
+    // background-color: $white-bg;
 }
 
 .footer {
@@ -55,8 +60,6 @@
 }
 
 .nav {
-    @extend .margin-top;
-
     width: 250px;
     width: 100%;
 

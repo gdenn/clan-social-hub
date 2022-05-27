@@ -1,0 +1,34 @@
+@import '../styles/common.scss';
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.cardView {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        @extend .shadow-1dp;
+
+        min-height: 100px;
+        width: 100%;
+        background-color: $white-bg;
+        border-radius: 5px;
+        padding: $space-s $space-m $space-l $space-m;
+        
+        .cardImage {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+    }
+}
+
+.cardView > * {
+    margin-bottom: $space-m;
+}
