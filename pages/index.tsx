@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHeart, faThumbsUp, faComment } from "@fortawesome/free-regular-svg-icons"
 
 import Layout from '../components/layout/Layout'
-
 import styles from '../styles/Home.module.scss'
 
 interface CardProps {
@@ -34,8 +35,22 @@ type NewsFeed = Post[]
 const Card = ({ children }: CardProps) => (
   <div className={styles.card}>
     {children}
+    <div className={styles.socialWrapper}>
+      <div className={styles.cardSocial}>
+        <span>
+          <FontAwesomeIcon icon={faHeart} /> 5
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faThumbsUp} /> 5
+        </span>
+        <span>
+          <FontAwesomeIcon icon={faComment} />
+          reply
+        </span>
+      </div>
+    </div>
   </div>
-)
+);
 
 const CardImage = ({alt, src}: CardImageProps) => (
   <div className={styles.cardImage}>
