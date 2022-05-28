@@ -1,80 +1,72 @@
 @import '../../styles/common.scss';
 
-.centerContent {
-    padding: 0 25% 0 25%;
-}
-
-.margin-top {
-    margin: $space-xl 0 $space-xl 0;
-}
-
 .pageWrapper {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-}
+    
+    .header, .footer {
+        width: 100%;
+        background-color: green;
+    }
 
-.container {
-    @extend .centerContent;
+    .header {
+        height: 50px;
+    }
 
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    width: 100%;
-    background-color: $gray-bg;
-}
+    .footer {
+        height: 200px;
+    }
 
-.left, .right, .main {
-    @extend .margin-top;
-}
+    .container {
+        height: 100%;
+        width: clamp(600px, 90vw, 800px);
+        margin: auto;
+        background-color: blue;
+    }
 
-.left, .right {
-    width: 250px;
-}
+    .main {
+        @extend .container;
 
-.main {
-    flex-grow: 1;
-}
-
-.main > * {
-    @extend .margin-top;
-
-    margin: 0 $space-l 0 $space-l;
-}
-
-.header {
-    @extend .shadow-1dp;
-    @extend .centerContent;
-
-    height: 50px;
-    width: 100vw;
-    background-color: green;
-    // background-color: $white-bg;
-}
-
-.footer {
-    height: 200px;
-    width: 100vw;
-    background-color: rgb(160, 159, 159);
-}
-
-.nav {
-    width: 250px;
-    width: 100%;
-
-    ul {
         display: flex;
-        flex-direction: column;
-    }
+        flex-direction: row;
 
-    ul > li {
-        list-style: none;
-        line-height: 1.8rem;
-    }
+        .navBar, .right, .center {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    ul > li:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
+        .navBar, .right {
+            width: clamp(100px, 25%, 150px);
+        }
+
+        .navBar {
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: yellow;
+
+            ul {
+                li {
+                    text-decoration: none;
+                    margin-bottom: 1.3rem;
+                }
+
+                li:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .center {
+            flex-grow: 1;
+            background-color: aqua;
+        }
+
+        .right {
+            background-color: yellow;
+        }
+    }    
 }
