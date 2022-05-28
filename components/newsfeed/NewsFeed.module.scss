@@ -1,0 +1,58 @@
+@import '../../styles/common.scss';
+
+.newsfeed {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+
+    .cardView {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .card {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 $space-l $space-l $space-l;
+
+            .author {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 50px;
+                background-color: green;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: blue;
+            }
+
+            .reactions {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: gray;
+            }
+
+            .actions {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: aqua;
+            }
+        }
+    }
+}
+
+

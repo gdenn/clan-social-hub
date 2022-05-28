@@ -33,10 +33,6 @@ const Layout = ({ children }: LayoutProps) => (
       <div className={styles.search}></div>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>News</li>
-          <li>Events</li>
-          <li>Users</li>
         </ul>
       </nav>
       <div className={styles.user}></div>
