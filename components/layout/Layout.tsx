@@ -30,11 +30,8 @@ const Layout = ({ children }: LayoutProps) => (
     </Head>
 
     <header className={styles.header}>
-      <div className={styles.container}></div>
-    </header>
-
-    <div className={styles.main}>
-      <nav className={styles.navBar}>
+      <div className={styles.search}></div>
+      <nav>
         <ul>
           <li>Home</li>
           <li>News</li>
@@ -42,13 +39,14 @@ const Layout = ({ children }: LayoutProps) => (
           <li>Users</li>
         </ul>
       </nav>
-      <section className={styles.center}></section>
+      <div className={styles.user}></div>
+    </header>
+
+    <div className={styles.main}>
+      <section className={styles.left}></section>
+      <section className={styles.center}>{children}</section>
       <section className={styles.right}></section>
     </div>
-
-    <footer className={styles.footer}>
-      <section className={styles.container}></section>
-    </footer>
   </div>
 );
 

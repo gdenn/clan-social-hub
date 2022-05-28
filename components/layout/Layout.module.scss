@@ -5,25 +5,49 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    
-    .header, .footer {
-        width: 100%;
-        background-color: green;
-    }
+    background-color: $color-primary;
 
     .header {
         height: 50px;
-    }
+        width: 100%;
+        background-color: $color-secondary;
+        margin-bottom: $space-l;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-    .footer {
-        height: 200px;
+        .search {
+            width: 200px;
+        }
+
+        nav {
+            flex-grow: 1;
+            height: 100%;
+            
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+
+                li {
+                    margin: 0 $space-m 0 $space-m;
+                }
+            }
+        }
+
+        .user {
+            width: 200px;
+        }
     }
 
     .container {
         height: 100%;
         width: clamp(600px, 90vw, 800px);
         margin: auto;
-        background-color: blue;
     }
 
     .main {
@@ -32,41 +56,18 @@
         display: flex;
         flex-direction: row;
 
-        .navBar, .right, .center {
+        .left, .right, .center {
             height: 100%;
             display: flex;
             flex-direction: column;
         }
 
-        .navBar, .right {
+        .left, .right {
             width: clamp(100px, 25%, 150px);
-        }
-
-        .navBar {
-            align-items: center;
-            justify-content: space-evenly;
-            background-color: yellow;
-
-            ul {
-                li {
-                    text-decoration: none;
-                    margin-bottom: 1.3rem;
-                }
-
-                li:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-            }
         }
 
         .center {
             flex-grow: 1;
-            background-color: aqua;
-        }
-
-        .right {
-            background-color: yellow;
         }
     }    
 }
