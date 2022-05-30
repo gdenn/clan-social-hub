@@ -9,7 +9,8 @@ const Home: NextPage = () => {
     <Layout
       left={<NewsFeed />}
       center={<NewsFeed />}
-      right={<NewsFeed />} />
+      right={<NewsFeed />}
+    />
   );
 }
 
