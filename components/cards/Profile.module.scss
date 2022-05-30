@@ -1,0 +1,55 @@
+@import '../../styles/common.scss';
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+    > * {
+        margin-right: $space-m;
+    }
+
+    .picture {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        overflow:hidden;
+    }
+
+    .meta {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+            font-size: .9rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+        }
+
+        .description, .subline {
+
+            font-size: .7rem;
+            font-weight: 400;
+
+            .tag {
+                padding-right: $space-s;
+                color: $color-ternary;
+            }
+
+            .tag:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .subline {
+            padding-top: $space-s;
+            color: rgba($color-font, .4);
+        }
+
+    }
+}
+
+

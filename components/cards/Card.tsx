@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 
 import styles from './Card.module.scss';
+import { Profile } from './Profile';
 
 interface VerticalCardViewProps {
     children: ReactNode
@@ -17,7 +18,9 @@ export const VerticalCardView = ({ children }: VerticalCardViewProps) => (
 )
 
 export const Card = ({ children }: CardProps) => (
-    <div className={styles.card}>
-        {children}
-    </div>
-)
+  <div className={styles.card}>
+    {children}
+  </div>
+);
+
+Card.Profile = Profile;

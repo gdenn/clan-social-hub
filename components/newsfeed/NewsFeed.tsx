@@ -44,14 +44,17 @@ const newsFeed: NewsFeed = [
 export const NewsFeed = () => (
   <section className={styles.newsfeed}>
     <div className={styles.cardView}>
-        <VerticalCardView>
-            <Card>
-                <div></div>
-            </Card>
-            <Card>
-                <div></div>
-            </Card>
-        </VerticalCardView>
+      <VerticalCardView>
+        <Card>
+          <Card.Profile
+            picture={{ src: "/profile1.jpg", alt: "myprofile" }}
+            name="Max Mustermann"
+            gamertag="the-gamer-one"
+            description="Playing TF2 & Dota 4 fun"
+            postedAt="2 Days ago"
+          />
+        </Card>
+      </VerticalCardView>
     </div>
   </section>
 );
