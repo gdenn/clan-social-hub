@@ -46,13 +46,13 @@ export const NewsFeed = () => (
     <div className={styles.cardView}>
       <VerticalCardView>
         <Card>
-          <Card.Profile
+          {/* <Card.Profile
             picture={{ src: "/profile1.jpg", alt: "myprofile" }}
             name="Max Mustermann"
             gamertag="the-gamer-one"
             description="Playing TF2 & Dota 4 fun"
             postedAt="2 Days ago"
-          />
+          /> */}
         </Card>
       </VerticalCardView>
     </div>
