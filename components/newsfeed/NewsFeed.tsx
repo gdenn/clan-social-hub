@@ -1,14 +1,7 @@
 import React from 'react'
-import Image from "next/image";
-import { ReactNode } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHeart,
-  faThumbsUp,
-  faComment,
-} from "@fortawesome/free-regular-svg-icons";
 
 import styles from './NewsFeed.module.scss'
+import { Card, VerticalCardView } from '../cards/Card';
 
 interface CardImageProps {
   alt?: string;
@@ -51,12 +44,14 @@ const newsFeed: NewsFeed = [
 export const NewsFeed = () => (
   <section className={styles.newsfeed}>
     <div className={styles.cardView}>
-        <div className={styles.card}>
-            <div className={styles.author}></div>
-            <div className={styles.content}></div>
-            <div className={styles.reactions}></div>
-            <div className={styles.actions}></div>
-        </div>
+        <VerticalCardView>
+            <Card>
+                <div></div>
+            </Card>
+            <Card>
+                <div></div>
+            </Card>
+        </VerticalCardView>
     </div>
   </section>
 );

@@ -6,9 +6,10 @@ import Layout from '../components/layout/Layout'
 
 const Home: NextPage = () => {
   return (
-    <Layout>
-      <NewsFeed />
-    </Layout>
+    <Layout
+      left={<NewsFeed />}
+      center={<NewsFeed />}
+      right={<NewsFeed />} />
   );
 }
 

@@ -5,7 +5,9 @@ import styles from './Layout.module.scss'
 import Link from 'next/link'
 
 interface LayoutProps {
-  children: ReactNode
+  left?: ReactNode;
+  center: ReactNode;
+  right?: ReactNode;
 }
 
 interface MenuItem {
@@ -21,7 +23,7 @@ const menuItems: MenuItems = [
   { name: "Users", linkTo: "/users" },
 ]
 
-const Layout = ({ children }: LayoutProps) => (
+const Layout = ({ left, center, right }: LayoutProps) => (
   <div className={styles.pageWrapper}>
     <Head>
       <title>Create Next App</title>
@@ -32,16 +34,15 @@ const Layout = ({ children }: LayoutProps) => (
     <header className={styles.header}>
       <div className={styles.search}></div>
       <nav>
-        <ul>
-        </ul>
+        <ul></ul>
       </nav>
       <div className={styles.user}></div>
     </header>
 
     <div className={styles.main}>
-      <section className={styles.left}></section>
-      <section className={styles.center}>{children}</section>
-      <section className={styles.right}></section>
+      <section className={styles.left}>{left}</section>
+      <section className={styles.center}>{center}</section>
+      <section className={styles.right}>{right}</section>
     </div>
   </div>
 );
